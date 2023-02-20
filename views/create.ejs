@@ -1,0 +1,14 @@
+<%- include("header")%>
+
+<form action="/add" method="post" class="form-control container w-25 bg-light shadow-lg p-3 mb-5 bg-body rounded">
+    <h2 class="text-center mb-3 "><span class="text-primary">Create </span>Task</h2>
+    <input class="form-control mb-3 fs-5" name="title" type="text" placeholder="Title">
+    <textarea class="form-control mb-3 fs-5 " name="desc" placeholder="Description...."></textarea>
+    <button class="btn btn-primary form-control mb-1 w-50"  >Add Task</button>
+    <br>
+    <small >This is page is to add task in your <span class="text-danger">active list</span></small>
+</form>
+
+
+
+<%- include("footer")%>

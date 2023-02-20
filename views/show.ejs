@@ -1,0 +1,25 @@
+<%- include("header") %>
+     
+<% if(tasks.length == 0){ %>
+   <h1 class="text-center text-primary"> No Task Remaning</h1> 
+<% } %>
+
+<% tasks.forEach(function(task){ %>
+
+  <ol class="list-group list-group-numbered container w-50 border border-primary mb-3">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold text-bold fs-3"><%= task.title %></div>
+        <p><%= task.desc %> | <small class="text-danger"><%= task.deadline %></small></p>
+      </div>
+      <a href="/edit">
+        <h2><span class="badge  rounded-pill">✏️</span></h2>
+      </a>
+      <a href="/delete/<%= task.id %>">
+        <h2><span class="badge rounded-pill">❌</span></h2>
+      </a>
+    </li>
+
+  </ol>
+  <% }) %>
+  <%- include("footer") %>
